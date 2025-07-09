@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ni-python-styleguide"
+name = "ni-python-styleguide2"
 # The a.0 here denotes a source based version
 # This is removed when released through the Publish-Package.yml GitHub action
 # Official PyPI releases follow Major.Minor.Patch
@@ -10,6 +10,7 @@ readme = "README.md" # apply the repo readme to the package as well
 repository = "https://github.com/ni/python-styleguide"
 license = "MIT"
 include = ["ni_python_styleguide/config.toml"]
+packages = [{include = "ni_python_styleguide"}]
 
 
 [tool.poetry.dependencies]
@@ -74,6 +75,7 @@ norecursedirs = "*__snapshots"
 
 [tool.ni-python-styleguide]
 extend_exclude = "*__snapshots/*/*input.py"
+application-import-names = "ni_python_styleguide"
 
 
 [build-system]
